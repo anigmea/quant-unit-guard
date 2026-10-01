@@ -1,0 +1,14 @@
+{
+  "name": "quant-unit-guard",
+  "version": "0.1.0",
+  "description": "Explicit units and covariance checks for quant inputs. No guessing.",
+  "type": "module",
+  "author": "anigmea",
+  "license": "MIT",
+  "engines": {"node": ">=18"},
+  "exports": {".": {"types": "./dist/index.d.ts", "import": "./dist/index.js"}},
+  "bin": {"quant-unit-guard": "./dist/cli.js"},
+  "files": ["dist", "README.md", "LICENSE", "CHANGELOG.md"],
+  "scripts": {"build": "tsc", "test": "node --test test/*.test.mjs", "prepublishOnly": "npm run build && npm test"},
+  "devDependencies": {"typescript": "^5.5.0", "@types/node": "^22.0.0"}
+}
